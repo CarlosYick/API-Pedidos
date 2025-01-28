@@ -3,6 +3,7 @@ const createError = require("http-errors");
 
 const { Response } = require("../common/response");
 
+// menu para la ruta raiz 
 module.exports.IndexAPI = (app) => {
     const router = express.Router();
 
@@ -18,6 +19,7 @@ module.exports.IndexAPI = (app) => {
     app.use("/", router);
 }
 
+// respuesta para rutas no encontradas
 module.exports.NotFoundAPI = (app) => {
     const router = express.Router();
 

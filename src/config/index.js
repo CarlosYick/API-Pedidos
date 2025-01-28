@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+// Traer y exportar variables de entorno
 module.exports.Config = {
     port: process.env.PORT,
     mysqlHost: process.env.MYSQL_HOST,

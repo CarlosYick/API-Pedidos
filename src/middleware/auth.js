@@ -3,6 +3,7 @@ const { Config } = require('../config/index');
 const { Response } = require("../common/response");
 const createError = require("http-errors");
 
+//autenticar solicitud usando JWT
 const authenticateJWT = (req, res, next) => {
     const authHeader = req.headers.authorization;
 

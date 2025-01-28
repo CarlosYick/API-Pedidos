@@ -8,6 +8,7 @@ const saltRounds = 10;
 
 const register = async (user) => {
     try {
+        //hashear contraseña
         const hashedPassword = await bcrypt.hash(user.password, saltRounds);
         const userWithHashedPassword = { ...user, password: hashedPassword };
 

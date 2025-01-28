@@ -17,5 +17,5 @@ UsersAPI(app);
 NotFoundAPI(app);
 
 app.listen(Config.port, ()=> {
-    debug(`Servidor escuchando en el puerto ${Config.port}`)
+    debug(`Server listening on port ${Config.port}`)
 })
