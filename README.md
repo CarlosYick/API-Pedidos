@@ -40,12 +40,12 @@ Asegúrate de tener instalados los siguientes programas en tu computador si toda
 
 ### Paso 3: Instalar las Dependencias
 - Crea un archivo **.env** en el directorio raíz del proyecto con el siguiente contenido:
-  DB_HOST=localhost
-  DB_USER=root
-  DB_PASSWORD=your_password
-  DB_NAME=my_database
-  PORT=3000
-  JWT_SECRET=your_jwt_secret
+  - DB_HOST=localhost
+  - DB_USER=root
+  - DB_PASSWORD=your_password
+  - DB_NAME=my_database
+  - PORT=3000
+  - JWT_SECRET=your_jwt_secret
 
 ### Paso 4: Crea la base de datos
 - En la raíz del proyecto hay un archivo llamado **bd.sql** que contiene codigo sql listo para crear la base de datos y sus tablas, copia el contenido de ese archivo y ejecutalo en tu herramienta de administración de base de datos MySQL.
