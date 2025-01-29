@@ -58,61 +58,65 @@ Asegúrate de tener instalados los siguientes programas en tu computador si toda
 ## Como Probar Endpoints ##
 La API estará disponible en http://localhost:3000
 
-- Registrar un usuario: **http://localhost:3000/api/users/register**
-    URL: /api/users/register
-    Método: POST
-    Cuerpo de la solicitud:
+- Registrar un usuario: `http://localhost:3000/api/users/register`
+    - **URL**: `/api/users/register`
+    - **Método**: `POST`
+    - **Cuerpo de la Solicitud (JSON)**:
+      ```json
+      {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "password": "password123"
+      }
+
+- Iniciar sesión: `http://localhost:3000/api/users/login`
+  - **URL**: `/api/users/login`
+  - **Método**: `POST`
+  - **Cuerpo de la solicitud (JSON)**:
+    ```json
     {
-      "name": "John Doe",
       "email": "john@example.com",
       "password": "password123"
     }
 
-- Iniciar sesión: **http://localhost:3000/api/users/login**
-  URL: /api/users/login
-  Método: POST
-  Cuerpo de la solicitud:
+- Obtener todas las órdenes de un usuario: `http://localhost:3000/api/orders`
+    - **URL**: `/api/orders`
+    - **Método**: `GET`
+    - **Encabezados**:
+    - **Authorization**: `Bearer jwt_token`
+
+- Crear una orden: `http://localhost:3000/api/orders`
+  - **URL**: `/api/orders`
+  - **Método**: `POST`
+  - **Encabezados**:
+  - **Authorization**: `Bearer jwt_token`
+  - **Cuerpo de la solicitud**:
+    ```json
     {
-      "email": "john@example.com",
-      "password": "password123"
+        "product": "queso",
+        "amount": 2,
+        "status": "En preparacion"
     }
 
-- Obtener todas las órdenes de un usuario: **http://localhost:3000/api/orders**
-  URL: /api/orders
-  Método: GET
-  Encabezados:
-  Authorization: Bearer jwt_token
+- Eliminar una orden: `http://localhost:3000/api/orders/:id`
+  - **URL**: `/api/orders/:id`
+  - **Método**: `DELETE`
+  - **Encabezados**:
+  - **Authorization**: `Bearer jwt_token`
 
-- Crear una orden: **http://localhost:3000/api/orders**
-  URL: /api/orders
-  Método: POST
-  Encabezados:
-  Authorization: Bearer jwt_token
-  Cuerpo de la solicitud:
-  {
-      "product": "queso",
-      "amount": 2,
-      "status": "En preparacion"
-  }
+- Obtener el estado de una orden: `http://localhost:3000/api/orders/:id/status`
+  - **URL**: `/api/orders/:id/status`
+  - **Método**: `GET`
+  - **Encabezados**:
+  - **Authorization**: `Bearer jwt_token`
 
-- Eliminar una orden: **http://localhost:3000/api/orders/:id**
-  URL: /api/orders/:id
-  Método: DELETE
-  Encabezados:
-  Authorization: Bearer jwt_token
-
-- Obtener el estado de una orden: **http://localhost:3000/api/orders/:id/status**
-  URL: /api/orders/:id/status
-  Método: GET
-  Encabezados:
-  Authorization: Bearer jwt_token
-
-- Actualizar una orden: **http://localhost:3000/api/orders/:id**
-  URL: /api/orders/:id
-  Método: PUT
-  Encabezados:
-  Authorization: Bearer jwt_token
-  Cuerpo de la solicitud:
+- Actualizar una orden: `http://localhost:3000/api/orders/:id`
+  - **URL**: `/api/orders/:id`
+  - **Método**: `PUT`
+  - **Encabezados**:
+  - **Authorization**: `Bearer jwt_token`
+  - **Cuerpo de la solicitud**:
+  ```json
   {
       "product": "queso",
       "amount": 2,
