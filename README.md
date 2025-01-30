@@ -38,7 +38,7 @@ Asegúrate de tener instalados los siguientes programas en tu computador si toda
   ```bash
   npm install
 
-### Paso 3: Instalar las Dependencias
+### Paso 3: Archivo para variables de entorno
 - Crea un archivo **.env** en el directorio raíz del proyecto con el siguiente contenido:
   - DB_HOST=localhost
   - DB_USER=root
